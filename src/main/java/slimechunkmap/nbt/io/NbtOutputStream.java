@@ -6,6 +6,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
+@SuppressWarnings("unused")
 public class NbtOutputStream extends DataOutputStream {
 
     public NbtOutputStream(Compression compression, OutputStream out) throws IOException {

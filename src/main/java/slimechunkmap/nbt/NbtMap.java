@@ -7,6 +7,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+@SuppressWarnings("unused")
 public class NbtMap extends AbstractMap<String, Nbt> implements Nbt, Map<String, Nbt> {
 
     static final byte ID = 10;

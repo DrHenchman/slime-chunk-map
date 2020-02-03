@@ -9,6 +9,7 @@ import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 import java.util.zip.InflaterInputStream;
 
+@SuppressWarnings("unused")
 public enum Compression {
     GZIP(1, GZIPInputStream::new, GZIPOutputStream::new),
     DEFLATE(2, InflaterInputStream::new, DeflaterOutputStream::new);

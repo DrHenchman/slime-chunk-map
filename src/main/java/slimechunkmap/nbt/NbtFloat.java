@@ -4,6 +4,7 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
+@SuppressWarnings("unused")
 public class NbtFloat implements Nbt {
 
     static final byte ID = 5;

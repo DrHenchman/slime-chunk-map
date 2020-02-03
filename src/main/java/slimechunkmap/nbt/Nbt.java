@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 
+@SuppressWarnings("unused")
 public interface Nbt extends Cloneable {
 
     byte getTypeId();

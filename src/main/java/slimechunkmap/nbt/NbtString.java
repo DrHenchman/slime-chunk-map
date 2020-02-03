@@ -5,6 +5,7 @@ import java.io.DataOutput;
 import java.io.IOException;
 import java.util.Objects;
 
+@SuppressWarnings("unused")
 public class NbtString implements Nbt {
 
     static final byte ID = 8;

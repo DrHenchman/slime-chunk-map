@@ -7,6 +7,7 @@ import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("unused")
 public class NbtList extends AbstractList<Nbt> implements Nbt, List<Nbt> {
 
     static final byte ID = 9;

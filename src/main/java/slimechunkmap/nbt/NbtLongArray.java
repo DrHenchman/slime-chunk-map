@@ -5,6 +5,7 @@ import java.io.DataOutput;
 import java.io.IOException;
 import java.util.Arrays;
 
+@SuppressWarnings("unused")
 public class NbtLongArray implements Nbt {
 
     static final byte ID = 12;
