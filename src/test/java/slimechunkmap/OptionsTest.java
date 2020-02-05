@@ -1,4 +1,4 @@
-package slimechunkmap.cli;
+package slimechunkmap;
 
 import org.junit.jupiter.api.Test;
 import slimechunkmap.Options;

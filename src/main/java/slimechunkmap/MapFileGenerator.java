@@ -11,7 +11,7 @@ import java.util.Collections;
 
 public class MapFileGenerator {
 
-    public static int generate(int mapNum, int mapId, int centerX, int centerZ, int scale, File directory) throws IOException {
+    public static int generate(int mapId, int centerX, int centerZ, int scale, File directory) throws IOException {
         //data={unlimitedTracking=1, trackingPosition=1, scale=2, dimension=0, banners=[]},DataVersion=1501
         NbtMap root = new NbtMap(Collections.emptyMap());
         NbtMap mapData = new NbtMap(Collections.emptyMap());

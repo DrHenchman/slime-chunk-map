@@ -13,10 +13,10 @@ public class Main {
             int centerZ = calculateCenterZFromOrigin(mapNum, options.scale, originZ);
             System.out.println("Generating dat file for map #" + mapNum + " with map ID " + mapId +
                     " at coordinates " + centerX + ", " + centerZ);
-            checkCode(MapFileGenerator.generate(mapNum, mapId, centerX, centerZ, options.scale, options.output));
+            checkCode(MapFileGenerator.generate(mapId, centerX, centerZ, options.scale, options.output));
             System.out.println("Generating loot table for map #" + mapNum + " with map ID " + mapId +
                     " at coordinates " + centerX + ", " + centerZ);
-            checkCode(LootTableGenerator.generate(System.out, options));
+            checkCode(LootTableGenerator.generate(options.seed, mapNum, mapId, centerX, centerZ, options.scale, options.output));
         }
     }
 
@@ -37,6 +37,7 @@ public class Main {
         }
     }
 
+    @SuppressWarnings("Duplicates")
     static int calculateCenterXFromOrigin(int mapNum, int scale, int originX) {
         if (mapNum == 1) {
             return originX;
@@ -65,6 +66,7 @@ public class Main {
         return offset * diameter + originX;
     }
 
+    @SuppressWarnings("Duplicates")
     static int calculateCenterZFromOrigin(int mapNum, int scale, int originZ) {
         if (mapNum == 1) {
             return originZ;

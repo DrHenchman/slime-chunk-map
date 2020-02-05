@@ -79,6 +79,8 @@ public class Options {
         out.println("Options:");
         out.println("\t--seed SEED");
         out.println("\t\tThe seed for the world to generate the maps for");
+        out.println("\t--output directory");
+        out.println("\t\tThe directory to output the files to. Default: current directory");
         out.println("\t--scale SCALE");
         out.println("\t\tThe scale for the maps. Default: 2");
         out.println("\t--start X Z");
