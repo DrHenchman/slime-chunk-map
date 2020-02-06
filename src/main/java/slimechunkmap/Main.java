@@ -53,10 +53,10 @@ public class Main {
         int halfWidth = ring - 1;
         int offset = -halfWidth;
         if (remainder >= width) {
-            remainder -= width;
+            remainder -= width - 1;
             offset = halfWidth;
             if (remainder >= width) {
-                remainder -= width;
+                remainder -= width - 1;
                 if (remainder >= width) {
                     offset = -halfWidth;
                 } else {
@@ -82,12 +82,12 @@ public class Main {
         int halfWidth = ring - 1;
         int offset = -halfWidth;
         if (remainder >= width) {
-            remainder -= width;
+            remainder -= width - 1;
             if (remainder >= width) {
-                remainder -= width;
+                remainder -= width - 1;
                 offset = halfWidth;
                 if (remainder >= width) {
-                    remainder -= width;
+                    remainder -= width - 1;
                     offset -= remainder;
                 }
             } else {
