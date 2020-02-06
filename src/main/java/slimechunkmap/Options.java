@@ -95,6 +95,8 @@ public class Options {
         out.println("\t\tThe range of map numbers to generate, inclusively. Default 1 9");
         out.println("\t--ring NUMBER");
         out.println("\t\tInstead of specifying a range of maps, generate the ring around existing maps");
+        out.println("\t--reserve RESERVE");
+        out.println("\t\tHow many additional maps to reserve map IDs for");
     }
 
     static class OptionIterator {
