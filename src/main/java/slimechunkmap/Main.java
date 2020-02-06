@@ -18,6 +18,10 @@ public class Main {
                     " at coordinates " + centerX + ", " + centerZ);
             checkCode(LootTableGenerator.generate(options.seed, mapNum, mapId, centerX, centerZ, options.scale, options.output));
         }
+        int nextMapId = options.mapIdOffset + (options.mapNumberEnd - options.mapNumberStart + 1) + options.reserve;
+        System.out.println("Reserving until map ID " + nextMapId);
+        IdCountsGenerator.generate(nextMapId, options.output);
+        System.out.println("Files generated into " + options.output);
     }
 
     private static Options parseOptions(String... args) {

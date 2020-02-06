@@ -14,6 +14,7 @@ public class Options {
     public int startZ = 0;
     public int mapNumberStart = 1;
     public int mapNumberEnd = 9;
+    public int reserve;
     public File output = new File(".");
 
     public static Options parse(String... args) {
@@ -58,6 +59,9 @@ public class Options {
                     break;
                 case "--output":
                     options.output = it.nextDirectory();
+                    break;
+                case "--reserve":
+                    options.reserve = it.nextInteger();
                     break;
                 default:
                     throw new IllegalArgumentException("Unsupported option: " + option);

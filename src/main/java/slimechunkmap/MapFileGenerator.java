@@ -24,7 +24,7 @@ public class MapFileGenerator {
         root.put("data", mapData);
         root.put("DataVersion", new NbtInt(1501));
         try (OutputStream output = openFile(directory, mapId)) {
-            try (NbtOutputStream nbtOutput = new NbtOutputStream(Compression.GZIP, new BufferedOutputStream(output))) {
+            try (NbtOutputStream nbtOutput = NbtOutputStream.builder().compression(Compression.GZIP).build(new BufferedOutputStream(output))) {
                 nbtOutput.writeNbt(root);
                 nbtOutput.flush();
             }
