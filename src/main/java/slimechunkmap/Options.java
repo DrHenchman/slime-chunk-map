@@ -16,6 +16,7 @@ public class Options {
     public int mapNumberEnd = 9;
     public int reserve;
     public File output = new File(".");
+    public boolean help;
 
     public static Options parse(String... args) {
         OptionIterator it = new OptionIterator(Arrays.asList(args).iterator());
@@ -63,6 +64,11 @@ public class Options {
                 case "--reserve":
                     options.reserve = it.nextInteger();
                     break;
+                case "--help":
+                    options.help = true;
+                    // short circuit the method, as we aren't actually going
+                    // to generate anything
+                    return options;
                 default:
                     throw new IllegalArgumentException("Unsupported option: " + option);
             }

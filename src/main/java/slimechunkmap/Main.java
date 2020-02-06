@@ -26,9 +26,14 @@ public class Main {
 
     private static Options parseOptions(String... args) {
         Options options = null;
+        boolean help;
         try {
             options = Options.parse(args);
+            help = options.help;
         } catch (RuntimeException e) {
+            help = true;
+        }
+        if (help) {
             Options.help(System.err);
             System.exit(1);
         }
@@ -66,7 +71,7 @@ public class Main {
         } else {
             offset += remainder;
         }
-        int diameter = ((int) Math.pow(2, scale)) * 128;
+        int diameter = 128 * (1 << scale);
         return offset * diameter + originX;
     }
 
@@ -94,7 +99,7 @@ public class Main {
                 offset += remainder;
             }
         }
-        int diameter = ((int) Math.pow(2, scale)) * 128;
+        int diameter = 128 * (1 << scale);
         return offset * diameter + originZ;
     }
 

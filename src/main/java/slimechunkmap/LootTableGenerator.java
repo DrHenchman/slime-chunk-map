@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 public class LootTableGenerator {
 
     public static int generate(long seed, int mapNum, int mapId, int centerX, int centerZ, int scale, File directory) throws IOException {
-        int diameter = ((int) Math.pow(2, scale)) * 128;
+        int diameter = 128 * (1 << scale);
         int radius = diameter / 2;
         List<String> parts = new ArrayList<>();
         for (int z = centerZ - radius + 8; z < centerZ + radius; z += 16) {
